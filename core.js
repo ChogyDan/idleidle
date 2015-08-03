@@ -1,4 +1,4 @@
-var myIdle = angular.module('myIdleGame', ["ngStorage"]);
+var myIdle = angular.module('myIdleGame', ["ngStorage", 'ui.layout']);
 
 myIdle.controller('coreCtrl', ['$interval', '$scope', '$localStorage', function ($interval, $scope, $localStorage) {
 	var self = this;

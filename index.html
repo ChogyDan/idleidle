@@ -2,15 +2,31 @@
 <html>
 <head>
 	<title>Idle game</title>
+	<link rel="stylesheet" type="text/css" href="include/ui-layout.css"/>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.js"></script>
+<script type="text/javascript" src="include/ngStorage.js"></script>
+<script type="text/javascript" src="include/ui-layout.js"></script>
+<script type="text/javascript" src="core.js"></script>
 </head>
 <body ng-app="myIdleGame" ng-controller="coreCtrl as game">
-<span>{{game.idles}}</span>
-<scorebar></scorebar>
-<inventory></inventory>
-<purchasescreen></purchasescreen>
+<div ui-layout="{ flow : 'row' }">
+	<div ui-layout-container max-size="20px" size="20px">{{game.idles}} idles</div><br />
+	<div ui-layout-container><div ui-layout="{ flow: 'column' }">
+		<div ui-layout-container>ITEMS <br />
+			<span>Idle thoughts</span> <br />
+			<span>Fantasies</span> <br />
+			<span>Philosophies</span> <br />
+		</div>
 
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.js"></script>
-<script type="text/javascript" src="include/ngStorage.js"></script>
-<script type="text/javascript" src="core.js"></script>
+		<div ui-layout-container>BUTTONS <br />
+			<button>think...</button> <br />
+			<button>fantasize...</button> <br />
+			<button>intellectualise...</button> <br />
+
+
+		</div>
+	</div></div>
+</div>
+
 </body>
 </html>
